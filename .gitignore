@@ -1,0 +1,19 @@
+# Temporary files
+*.000
+*bak*
+*bck*
+*~
+_autosave-*
+*.tmp
+*cache*
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Folders
+gerbers
+rs-probe-backups
