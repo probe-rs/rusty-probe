@@ -19,7 +19,7 @@ The firmware is available here and is open-source: ...
 * The probe support 1.8v - 3.3v signal voltage and `Vtarget`
 * For compatibility (mainly with Tag-Connect TC2050), pin 7 on the STDC 14 can be connected to the protected 5V.
 
-The schematic can be found in [the schematic PDF](schematic-v1.0.pdf).
+The schematic can be found in [the schematic PDF](rs-probe-v1.0-rev-a.pdf).
 
 ![alt text](rs-probe-top.jpg "probe")
 ![alt text](rs-probe-bot.jpg "probe")
