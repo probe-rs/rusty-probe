@@ -1,6 +1,6 @@
 close all
 
-Vref = 1.25
+Vref = 0.8
 Vo_min = 1.8
 Vo_max = 3.3
 Vs_min = 3.1
@@ -15,13 +15,13 @@ b = [Vo_max - Vref; Vo_min - Vref]
 R = inv(A) * b
 
 
-R1 = 100000
+R1 = 47000
 R2 = R1 / R(1)
 R3 = R1 / R(2)
 
-R1 = 100000
-R2 = 82000
-R3 = 150000
+R1 = 47000
+R2 = 17400
+R3 = 91000
 
 Vs = linspace(Vs_max,Vs_min,1000);
 Vo = (1 + R1/R2) * Vref + R1/R3 * (Vref - Vs);
