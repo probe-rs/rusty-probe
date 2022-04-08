@@ -21,7 +21,7 @@ R3 = R1 / R(2)
 
 R1 = 47000
 R2 = 17400
-R3 = 68000 + 2000 % 2000 comes from the PWM to analog
+R3 = 47000 + 17400 + 5100 % 2000 comes from the PWM to analog
 
 Vs = linspace(Vs_max,Vs_min,1000);
 Vo = (1 + R1/R2) * Vref + R1/R3 * (Vref - Vs);
@@ -29,7 +29,8 @@ Vo = (1 + R1/R2) * Vref + R1/R3 * (Vref - Vs);
 plot(Vs,Vo)
 grid on
 xlabel("Vset")
-xlabel("Vout")
+ylabel("Vout")
+xlim([0, 3.3])
 
 Vmax = Vo(1)
 Vmin  = Vo(end)
