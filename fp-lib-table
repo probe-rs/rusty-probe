@@ -33,4 +33,5 @@
   (lib (name "jst")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/footprints/jst.pretty")(options "")(descr ""))
   (lib (name "logo")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/footprints/logo.pretty")(options "")(descr ""))
   (lib (name "lga")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/footprints/lga.pretty")(options "")(descr ""))
+  (lib (name "kikit")(type "KiCad")(uri "${KIPRJMOD}/kikit.pretty")(options "")(descr ""))
 )

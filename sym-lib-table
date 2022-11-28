@@ -37,4 +37,5 @@
   (lib (name "usb_otg")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/symbols/usb_otg.kicad_sym")(options "")(descr ""))
   (lib (name "xilinx7")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/symbols/xilinx7.kicad_sym")(options "")(descr ""))
   (lib (name "xilinxultra")(type "KiCad")(uri "${KIPRJMOD}/kicad_libs/symbols/xilinxultra.kicad_sym")(options "")(descr ""))
+  (lib (name "kikit")(type "KiCad")(uri "${KIPRJMOD}/kikit.kicad_sym")(options "")(descr ""))
 )
