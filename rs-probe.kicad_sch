@@ -1923,7 +1923,7 @@
       )
       (symbol "+3.3V_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -2598,6 +2598,7 @@
   (no_connect (at 121.92 193.04) (uuid cb8e411a-1cc5-4c53-9eeb-4024c1c299a4))
   (no_connect (at 121.92 195.58) (uuid cb8e411a-1cc5-4c53-9eeb-4024c1c299a5))
   (no_connect (at 105.41 102.87) (uuid cee51a34-8c75-46e9-8081-46f77172b09c))
+  (no_connect (at 121.92 177.8) (uuid f04d36e8-12ea-453d-8b84-337d0504267f))
 
   (wire (pts (xy 293.37 48.26) (xy 295.91 48.26))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -3974,10 +3975,6 @@
   (label "T_VCP_TX" (at 199.39 90.17 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 617edc4b-bc47-43be-b281-95c12292b49c)
-  )
-  (label "T_ENABLE" (at 121.92 177.8 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 63383ed8-be79-44af-8f98-e6c12200f750)
   )
   (label "~{RESET}" (at 121.92 182.88 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -5634,7 +5631,7 @@
   (symbol (lib_id "Device:R_Small") (at 196.85 115.57 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1ffe0bc9-68c4-4f3c-a649-434e47bfb634)
-    (property "Reference" "1Meg1" (id 0) (at 196.85 113.03 90))
+    (property "Reference" "R10" (id 0) (at 196.85 113.03 90))
     (property "Value" "1Meg" (id 1) (at 196.85 115.57 90))
     (property "Footprint" "passive:R_0402" (id 2) (at 196.85 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -6009,7 +6006,7 @@
     (property "Footprint" "qfn:RP2040-QFN-56" (id 2) (at 71.12 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (id 3) (at 71.12 193.04 0)
+    (property "Datasheet" "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" (id 3) (at 71.12 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C2040" (id 4) (at 90.17 193.04 0)
@@ -6349,14 +6346,14 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 65b8da5f-569d-47bd-90ce-1dfcd9999b02)
     (property "Reference" "U14" (id 0) (at 240.03 138.43 0))
-    (property "Value" "NCP133BMXADJTCG" (id 1) (at 240.03 140.97 0))
+    (property "Value" "NCP133AMXADJTCG" (id 1) (at 240.03 140.97 0))
     (property "Footprint" "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack" (id 2) (at 241.3 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.onsemi.com/pub/Collateral/NCP133-D.PDF" (id 3) (at 241.3 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C892111" (id 4) (at 240.03 147.32 0)
+    (property "LCSC" "C457672" (id 4) (at 240.03 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 93fbfbe3-554b-47f0-b81a-4b40df6c6f55))
@@ -7123,14 +7120,14 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b187e5ef-1abc-4b3f-8267-57c84f798790)
     (property "Reference" "U13" (id 0) (at 241.3 189.23 0))
-    (property "Value" "NCP133BMXADJTCG" (id 1) (at 241.3 191.77 0))
+    (property "Value" "NCP133AMXADJTCG" (id 1) (at 241.3 191.77 0))
     (property "Footprint" "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack" (id 2) (at 242.57 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.onsemi.com/pub/Collateral/NCP133-D.PDF" (id 3) (at 242.57 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C892111" (id 4) (at 241.3 198.12 0)
+    (property "LCSC" "C457672" (id 4) (at 241.3 198.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 791e5712-08f1-44dd-a510-873fb62747ff))
@@ -8336,9 +8333,6 @@
     (path "/f4769820-6792-4021-8152-c569b61cbd12"
       (reference "#PWR0127") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1ffe0bc9-68c4-4f3c-a649-434e47bfb634"
-      (reference "1Meg1") (unit 1) (value "1Meg") (footprint "passive:R_0402")
-    )
     (path "/cbe91def-6a15-48c1-b011-08471f68b5e4"
       (reference "C1") (unit 1) (value "0.1u") (footprint "passive:C_0402")
     )
@@ -8498,6 +8492,9 @@
     (path "/00000000-0000-0000-0000-00005ef19f7d"
       (reference "R9") (unit 1) (value "47k") (footprint "passive:R_0402")
     )
+    (path "/1ffe0bc9-68c4-4f3c-a649-434e47bfb634"
+      (reference "R10") (unit 1) (value "1Meg") (footprint "passive:R_0402")
+    )
     (path "/00000000-0000-0000-0000-00005ef17f05"
       (reference "R11") (unit 1) (value "47k") (footprint "passive:R_0402")
     )
@@ -8589,10 +8586,10 @@
       (reference "U12") (unit 1) (value "NCP161AMX330TBG") (footprint "dfn:UDFN-4_1x1mm_P0.65mm")
     )
     (path "/b187e5ef-1abc-4b3f-8267-57c84f798790"
-      (reference "U13") (unit 1) (value "NCP133BMXADJTCG") (footprint "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack")
+      (reference "U13") (unit 1) (value "NCP133AMXADJTCG") (footprint "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack")
     )
     (path "/65b8da5f-569d-47bd-90ce-1dfcd9999b02"
-      (reference "U14") (unit 1) (value "NCP133BMXADJTCG") (footprint "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack")
+      (reference "U14") (unit 1) (value "NCP133AMXADJTCG") (footprint "Package_DFN_QFN:DFN-6-1EP_1.2x1.2mm_P0.4mm_EP0.3x0.94mm_PullBack")
     )
     (path "/cdcb1c1b-d985-4eee-ab60-3f789f8bfd58"
       (reference "X1") (unit 1) (value "12 MHz") (footprint "crystals:Crystal_SMD_2520-4Pin_2.5x2.0mm")

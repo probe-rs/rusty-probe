@@ -1,0 +1,127 @@
+# Example KiPlot config file
+kiplot:
+  version: 1
+
+filters:
+  - name: 'exclude_any'
+    type: 'generic'
+    comment: 'Almost same as KiBoM, no fiducial'
+    exclude_refs:
+      - REF*
+    exclude_any:
+      - column: References
+        regex: '^TP[0-9]*'
+      - column: References
+        regex: '^FID'
+      - column: Part
+        regex: 'mount.*hole'
+      - column: Part
+        regex: 'solder.*bridge'
+      - column: Part
+        regex: 'solder.*jump'
+      - column: Part
+        regex: 'test.*point'
+      - column: Footprint
+        regex: 'test.*point'
+      - column: Footprint
+        regex: 'mount.*hole'
+
+preflight:
+  run_erc: true
+  update_xml: true
+  run_drc: true
+  check_zone_fills: false
+  ignore_unconnected: false
+
+global:
+  drc_exclusions_workaround: true
+#   kiauto_wait_start: 60
+#   kiauto_time_out_scale: 2
+
+outputs:
+  - name: 'bom'
+    comment: "Bill of Materials in CSV format"
+    type: bom
+    dir: .
+    options:
+      exclude_filter: 'exclude_any'
+      #group_fields: ['Part', 'Part Lib', 'Value', 'Footprint', 'Footprint Lib']S
+  
+  - name: 'position'
+    comment: "Pick and place file, JLC style"
+    type: position
+    dir: .
+    options:
+      format: CSV
+
+  - name: 'board_image_top'
+    comment: "Image of PCB"
+    type: pcbdraw
+    options:
+      bottom: false
+      format: "png"
+
+  - name: 'board_image_bottom'
+    comment: "Image of PCB"
+    type: pcbdraw
+    options:
+      bottom: true
+      format: "png"
+
+  - name: 'print_sch'
+    comment: "Print schematic (PDF)"
+    type: pdf_sch_print
+    dir: .
+    options:
+      output: Schematic.pdf
+
+  - name: "interactive_bom"
+    comment: "Interactive Bill of Materials (HTML)"
+    type: ibom
+    dir: Interactive BoM
+    options:
+      blacklist: "DNF*"
+
+  - name: 'gerbers'
+    comment: "Gerbers for the board house"
+    type: gerber
+    dir: Gerbers
+    options:
+      # generic layer options
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: false
+      use_aux_axis_as_origin: false
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+      check_zone_fills: true
+
+      # gerber options
+      line_width: 0.1
+      subtract_mask_from_silk: false
+      use_protel_extensions: false
+      gerber_precision: 4.6
+      create_gerber_job_file: true
+      use_gerber_x2_attributes: true
+      use_gerber_net_attributes: true
+
+    layers: "all"
+  
+  - name: 'drill_files'
+    comment: "Drill files for the board house"
+    type: excellon
+    dir: Gerbers
+    options:
+      metric_units: true
+      pth_and_npth_single_file: false
+  
+  - name: 'zip_gerbers'
+    comment: "ZIPed gerbers"
+    type: compress
+    dir: ./
+    priority: 0
+    options:
+      files: 
+        - source: "Gerbers/*"
