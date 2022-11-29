@@ -1138,9 +1138,9 @@
       (net 32 "/PROTECTED_5V") (pinfunction "K") (pintype "passive") (tstamp 0ee1f7c2-6db4-4fcf-8217-b735e0fb0e2c))
     (pad "2" smd roundrect (at 0.485 0 180) (size 0.59 0.64) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 39 "/FUSED_5V") (pinfunction "A") (pintype "passive") (tstamp c41b6d9f-2a38-454d-9583-7cc8a6c5dc01))
-    (model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_0402_1005Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_0603_1608Metric.step"
       (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 0.8 0.8 0.8))
       (rotate (xyz 0 0 0))
     )
   )
@@ -1597,6 +1597,11 @@
     (model "${KICAD6_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/UDFN-4_1x1mm_P0.65mm.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KICAD6_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/AMS_QFN-4-1EP_2x2mm_P0.95mm.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.7 0.6 0.8))
       (rotate (xyz 0 0 0))
     )
   )
@@ -3637,9 +3642,9 @@
       (net 25 "/T_VCC") (pinfunction "K") (pintype "passive") (tstamp 20a58b52-e53c-42ca-84ff-3b1ac2d9facc))
     (pad "2" smd roundrect (at 0.485 0) (size 0.59 0.64) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 87 "Net-(D3-Pad2)") (pinfunction "A") (pintype "passive") (tstamp 04e194fa-e555-46da-9345-589b658aca73))
-    (model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_0402_1005Metric.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_0603_1608Metric.step"
       (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 0.8 0.8 0.8))
       (rotate (xyz 0 0 0))
     )
   )
@@ -6776,7 +6781,7 @@
   (gr_rect (start 151.3 79.4) (end 154.9 82.8) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp beb5e92b-bde6-4468-8459-39fc6bfdafbd))
   (gr_rect (start 182.05 79.8) (end 180.2 80.8) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp c3c85425-bf9a-46ba-b149-1fe47f1a56a8))
   (gr_rect (start 149.95 80) (end 149.15 81.55) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp e9866319-f167-402a-8bd1-3350af279980))
-  (gr_rect (start 151.3 82.8) (end 149.15 81.55) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp f1d3fcdd-e819-4342-b431-b343ceb0dfd8))
+  (gr_rect (start 151.3 83.8) (end 149.15 81.55) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp f1d3fcdd-e819-4342-b431-b343ceb0dfd8))
   (gr_rect (start 178.3 92.3) (end 179.9 92.8) (layer "F.Adhes") (width 0.1) (fill solid) (tstamp fd95e6e1-2b37-4604-8f85-981efac5e15c))
   (gr_circle (center 182.92 90.32) (end 183.37 90.32) (layer "F.Paste") (width 0.1) (fill solid) (tstamp 213874c7-9a8f-41f0-a24d-cf2ee0e3d5b1))
   (gr_rect (start 181.82 81.23) (end 182.92 82.13) (layer "F.Paste") (width 0.1) (fill solid) (tstamp 23f92000-11e7-4f5b-ba37-63f294e739e1))
