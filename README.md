@@ -14,12 +14,12 @@ The firmware is available here and is open-source: ...
 * Castellated vias for all programming pins, power and 2 GPIOs.
 * USB-C connector.
 * Target 5V and `Vtarget` is protected with an diode circuit to not have current flow from the target to the host.
-* The probe support 1.8v - 3.3v signal voltage and `Vtarget`
+* The probe support 1.8v - 3.3v signal voltage and can track `Vtarget`.
 * The key pin on the Cortex-Debug can be connected to the protected 5V.
 
-The schematic can be found in [the schematic PDF](rs-probe-v1.0-rev-e.pdf).
+The schematic can be found in the GitHub actions, full production files are generated for each commit.
 
-![alt text](rs-probe-rev-e.jpg "probe")
+![alt text](rs-probe.jpg "probe")
 
 ## Cable Assembly
 
