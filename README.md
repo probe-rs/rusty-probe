@@ -23,8 +23,6 @@ The schematic can be found in the GitHub actions, full production files are gene
 
 ## Cable Assembly
 
-The rs-probe package sold on our [shop](https://shop.probe.rs) contains two 10 wire ribbon cables and 4 10p connector.
-
 ![alt text](docs/cable-asssembly-instructions.png "cable assembly")
 
 ## License
