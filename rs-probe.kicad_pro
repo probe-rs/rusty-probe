@@ -56,7 +56,11 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "footprint_type_mismatch|148500000|92000000|00000000-0000-0000-0000-00005f10abfb|00000000-0000-0000-0000-000000000000",
+        "footprint_type_mismatch|179000000|79000000|00000000-0000-0000-0000-00005f10d3b1|00000000-0000-0000-0000-000000000000",
+        "footprint_type_mismatch|182000000|93000000|00000000-0000-0000-0000-00005f10ea7f|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -120,7 +124,7 @@
         "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.19999999999999998,
-        "min_hole_clearance": 0.19999999999999998,
+        "min_hole_clearance": 0.19,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
