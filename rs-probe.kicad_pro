@@ -59,7 +59,9 @@
       "drc_exclusions": [
         "footprint_type_mismatch|148500000|92000000|00000000-0000-0000-0000-00005f10abfb|00000000-0000-0000-0000-000000000000",
         "footprint_type_mismatch|179000000|79000000|00000000-0000-0000-0000-00005f10d3b1|00000000-0000-0000-0000-000000000000",
-        "footprint_type_mismatch|182000000|93000000|00000000-0000-0000-0000-00005f10ea7f|00000000-0000-0000-0000-000000000000"
+        "footprint_type_mismatch|182000000|93000000|00000000-0000-0000-0000-00005f10ea7f|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|152400000|80800000|e8740d46-3138-4171-aa9b-2a40056a49ee|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|172500000|81000000|e7d3cdad-117c-4b04-8f8b-e3b2bc618357|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "filename": "board_design_settings.json",
@@ -86,7 +88,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "ignore",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -402,7 +404,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
