@@ -1,14 +1,20 @@
 name: generate outputs
 
 on:
-  push:
-    paths:
-    - '**.sch'
-    - '**.kicad_pcb'
+  merge_group:
   pull_request:
-    paths:
-      - '**.sch'
-      - '**.kicad_pcb'
+  push:
+    branches:
+      - master
+# on:
+#   push:
+#     paths:
+#       - '**.kicad_sch'
+#       - '**.kicad_pcb'
+#   pull_request:
+#     paths:
+#       - '**.kicad_sch'
+#       - '**.kicad_pcb'
 
 jobs:
   generate_outputs:
@@ -17,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: gitmarker
       run: "for i in *.kicad_pcb; do git rev-parse --short HEAD | xargs -I % sed -i 's/{GITHASH}/%/g' $i; done" # add git marker
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - uses: INTI-CMNB/KiBot@v2_k7
       with:
         # Required - kibot config file
         config: config.kibot.yaml
