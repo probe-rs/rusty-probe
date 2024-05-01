@@ -25,12 +25,12 @@ The schematic can be found in the GitHub actions, full production files are gene
 
 Here is a small comparison with a few different probes:
 
-|                         | Rusty Probe                         | PicoProbe                     | Raspberry Pi Debug Probe       | STLinkV3           | JLink                               |
-|-------------------------|-------------------------------------|-------------------------------|--------------------------------|--------------------|-------------------------------------|
-| Max speed               | 62 MHz                              | ?                             | 10 MHz                         | 24 MHz             | 15 MHz                              |
-| Target interface support| JTAG, Serial Wire Debug (ARM)       | Serial Wire Debug (ARM)       | Serial Wire Debug (ARM), UART  | JTAG, Serial Wire Debug (ARM), UART.  Note: STM8/32 chips only       | JTAG, Serial Wire Debug (ARM), Serial Wire Output (SWO)|
+|                         | Rusty Probe                         | PicoProbe                     | Raspberry Pi Debug Probe       | STLinkV3               | JLink                               |
+|-------------------------|-------------------------------------|-------------------------------|--------------------------------|------------------------|-------------------------------------|
+| Max speed               | 62 MHz                              | ?                             | 10 MHz                         | 24 MHz                 | 15 MHz                              |
+| Target interface support| JTAG, SWD, SWO, UART                | SWD                           | SWD, UART                      | JTAG, SWD, UART, SWO <br>Note: STM8/32 chips only       | JTAG, SWD, SWO|
 | IO voltage control      | 1.8-3.3V                            | 3.3V                          | 3.3V                           | 1.6-3.3V           | 1.6-3.3V somtimes  |
-| Type                    |  Open Source & Hardware              | Open Source                   | Proprietary                    | Proprietary        | Proprietary        |
+| Type                    | Open Source & Hardware              | Open Source                   | Proprietary                    | Proprietary        | Proprietary        |
 | Language                | Rust                                | C                             | C                              | C                  | C                  |
 | Protocol                | CMSIS-DAP                           | CMSIS-DAP                     | CMSIS-DAP                      | Proprietary        | CMSIS-DAP          |
 | Programming connector   | Cortex-M Debug 10p                  | -                             | JST                            | Cortex-M Debug 14p | Cortex-M Debug 10p |
