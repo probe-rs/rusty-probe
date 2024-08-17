@@ -29,7 +29,7 @@ Here is a small comparison with a few different probes:
 |-----------------------|------------------------|-------------|--------------------------|--------------------|--------------------|
 | Max speed             | 62 MHz                 | ?           | 10 MHz                   | 24 MHz             | 15 MHz             |
 | Target support        | any                    | any         | any                      | STM32              | any                |
-| IO voltage control    | 1.8-3.3V               | 3.3V        | 3.3V                     | 1.6-3.3V           | 1.6-3.3V somtimes  |
+| IO voltage control    | 1.8-3.3V               | 3.3V        | 3.3V                     | 1.6-3.3V           | 1.6-3.3V sometimes |
 | Type                  | Open Source & Hardware | Open Source | Proprietary              | Proprietary        | Proprietary        |
 | Language              | Rust                   | C           | C                        | C                  | C                  |
 | Protocol              | CMSIS-DAP              | CMSIS-DAP   | CMSIS-DAP                | Proprietary        | CMSIS-DAP          |
