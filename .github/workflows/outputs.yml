@@ -1,36 +1,28 @@
-name: generate outputs
+name: Generate Outputs for Review
+
+permissions:
+  contents: read
 
 on:
   merge_group:
   pull_request:
-  push:
-    branches:
-      - master
-# on:
-#   push:
-#     paths:
-#       - '**.kicad_sch'
-#       - '**.kicad_pcb'
-#   pull_request:
-#     paths:
-#       - '**.kicad_sch'
-#       - '**.kicad_pcb'
 
 jobs:
-  generate_outputs:
+  build:
+    name: Generate Outputs for Review
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: gitmarker
-      run: "for i in *.kicad_pcb; do git rev-parse --short HEAD | xargs -I % sed -i 's/{GITHASH}/%/g' $i; done" # add git marker
-    - uses: INTI-CMNB/KiBot@v2_k7
-      with:
-        # Required - kibot config file
-        config: config.kibot.yaml
-        # optional - prefix to output defined in config
-        dir: output
-    - name: upload results
-      uses: actions/upload-artifact@v3
-      with:
-        name: output
-        path: output
+      - uses: actions/checkout@v4
+      - name: gitmarker
+        run: "for i in *.kicad_pcb; do git rev-parse --short HEAD | xargs -I % sed -i 's/{GITHASH}/%/g' $i; done" # add git marker
+      - uses: INTI-CMNB/KiBot@v2_k7
+        with:
+          # Required - kibot config file
+          config: config.kibot.yaml
+          # optional - prefix to output defined in config
+          dir: output
+      - name: Upload temporary artifacts for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: output
+          path: output
