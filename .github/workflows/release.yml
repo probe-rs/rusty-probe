@@ -1,0 +1,40 @@
+name: Upload Release Asset
+
+permissions:
+  contents: write
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set tag hash
+        id: tag
+        run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - name: gitmarker
+        run: "for i in *.kicad_pcb; do sed -i 's/{GITHASH}/${{ steps.tag.outputs.hash }}/g' $i; done" # add git marker
+      - uses: INTI-CMNB/KiBot@v2_k7
+        with:
+          # Required - kibot config file
+          config: config.kibot.yaml
+          # optional - prefix to output defined in config
+          dir: output
+      - name: Release with Notes
+        uses: softprops/action-gh-release@v2
+        with:
+          body: Publish new version of PCB
+          tag_name: ${{ github.ref_name }}
+          prerelease: false
+          make_latest: true
+          fail_on_unmatched_files: true
+          files: |
+            output/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
