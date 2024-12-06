@@ -28,6 +28,10 @@ jobs:
           config: config.kibot.yaml
           # optional - prefix to output defined in config
           dir: output
+      - name: Prepare release
+        run: |
+          mkdir -p zipped/
+          zip -n zip -9 -o -D zipped/rusty-probe-pcb.zip output/*.csv output/*.html output/*.png output/*.pdf output/*.zip
       - name: Release with Notes
         uses: softprops/action-gh-release@v2
         with:
@@ -37,6 +41,6 @@ jobs:
           make_latest: true
           fail_on_unmatched_files: true
           files: |
-            output/**
+            zipped/rusty-probe-pcb.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

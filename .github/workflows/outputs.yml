@@ -23,8 +23,12 @@ jobs:
           config: config.kibot.yaml
           # optional - prefix to output defined in config
           dir: output
+      - name: Prepare release
+        run: |
+          mkdir -p zipped/
+          zip -n zip -9 -o -D zipped/rusty-probe-pcb.zip output/*.csv output/*.html output/*.png output/*.pdf output/*.zip
       - name: Upload temporary artifacts for review
         uses: actions/upload-artifact@v4
         with:
-          name: output
-          path: output
+          name: rusty-probe-pcb
+          path: zipped/rusty-probe-pcb.zip
