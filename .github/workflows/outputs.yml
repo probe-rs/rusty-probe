@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       - name: gitmarker
         run: "for i in *.kicad_pcb; do git rev-parse --short HEAD | xargs -I % sed -i 's/{GITHASH}/%/g' $i; done" # add git marker
-      - uses: INTI-CMNB/KiBot@v2_k7
+      - uses: INTI-CMNB/KiBot@v2_k8
         with:
           # Required - kibot config file
           config: config.kibot.yaml
