@@ -15,12 +15,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: true
       - name: Set tag hash
         id: tag
         run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
       - name: gitmarker
         run: "for i in *.kicad_pcb; do sed -i 's/{GITHASH}/${{ steps.tag.outputs.hash }}/g' $i; done" # add git marker
-      - uses: INTI-CMNB/KiBot@v2_k7
+      - uses: INTI-CMNB/KiBot@v2_k8
         with:
           # Required - kibot config file
           config: config.kibot.yaml
